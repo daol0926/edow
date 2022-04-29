@@ -200,6 +200,11 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
     height: 20px;
     background-image: url(../images/common/ico-btn-download.svg);
 }
+.ico-btn-clip {
+    background-image: url(../images/common/ico-clip.svg);
+    width:14px;
+    height:14px;
+}
 .ico-btn-srch{
     width:40px;
     height:40px;
@@ -287,6 +292,9 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
 [class*=label-input-]{
     position: relative;
     color:#999;
+}
+[class*=label-input-] .input-txt.blk{
+    color:#212529;
 }
 .label-input-radio .input-txt::before,
 .label-input-checkbox .input-txt::before{
