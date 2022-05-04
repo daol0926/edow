@@ -118,6 +118,11 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
     color:#328BF2;
     border:1px solid #328BF2;
 }
+.btn-c-wb.sky{
+    background-color: #EBF5FF;
+    color:#328BF2;
+    border:1px solid #328BF2;
+}
 .btn-c-wg{
     background-color: #fff;
     color:#444;

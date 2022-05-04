@@ -61,11 +61,26 @@
                     <h2 class="page-title">공지사항</h2>
                         <!-- srch-wrp -->
                         <div class="srch-wrp">
-                            <td>
-                                <label><input type="checkbox" name="color" value="title">제목</label>
-                                <label><input type="checkbox" name="color" value="red">내용</label>
-                                <label><input type="checkbox" name="color" value="red">작성자</label>
-                            </td>
+                            <ul class="row">
+                                <li>
+                                    <label for="list01" class="label-input-checkbox mb0">
+                                        <input type="checkbox" id="list01">
+                                        <span class="input-txt blk">제목</span>
+                                    </label>
+                                </li>
+                                <li class="ml10">
+                                    <label for="list02" class="label-input-checkbox mb0">
+                                        <input type="checkbox" id="list02">
+                                        <span class="input-txt blk">내용</span>
+                                    </label>
+                                </li>
+                                <li class="ml10">
+                                    <label for="list03" class="label-input-checkbox mb0">
+                                        <input type="checkbox" id="list03">
+                                        <span class="input-txt blk">작성자</span>
+                                    </label>
+                                </li>
+                            </ul>
                             <input type="text" class="form-control form-srch" value="검색어를 입력해주세요." />
                             <button type="button" class="btn-c-wb">조회</button>
                         </div>
