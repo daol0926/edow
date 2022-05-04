@@ -75,6 +75,8 @@
                     <h2 class="page-title">Modal / Alert</h2>
                     <button type="button" class="btn-c-blue btn-middle" data-bs-toggle="modal" data-bs-target="#alertComn">기본Alert</button>
                     <button type="button" class="btn-c-blue btn-middle" data-bs-toggle="modal" data-bs-target="#mapAdd">조사지점 등록</button>
+                    <button type="button" class="btn-c-blue btn-middle" data-bs-toggle="modal" data-bs-target="#layerMeta">레이어 메타정보</button>
+                    <button type="button" class="btn-c-blue btn-middle" data-bs-toggle="modal" data-bs-target="#moniPop">모니터링팝업</button>
                 </section>
                 <!--//content -->
             </div>
@@ -149,7 +151,367 @@
             </div>
         </div>
         <!--//mapAdd -->
+        <!-- layerMeta -->
+        <div class="modal fade alert-wrp layer_Meta" id="layerMeta">
+            <div class="modal-dialog modal-Meta modal-dialog-centered">
+                <div class="modal-content pb60">
+                    <div class="modal-btn-area">
+                        <button type="button" class="modal-close" data-bs-dismiss="modal">&times;</button>
+                    </div>
+                    <h2 class="pop-title">레이어 메타정보</h2>
+                    <div class="pop-cont">
+                        <!-- layerMeta-desc -->
+                        <div class="tbl-wrp"> 
+                            <table class="mb0">
+                                <colgroup>
+                                    <col style="width:30%;" />
+                                    <col style="width:70%;" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="2" class="MetaTitle">레이어 메타정보</th>
+                                    </tr>                                    
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>구분</th>
+                                        <td class="text-left">환경관리목</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주제도명</th>
+                                        <td class="text-left">생태자연도</td>
+                                    </tr>
+                                    <tr>
+                                        <th>갱신주기</th>
+                                        <td class="text-left">매년 7월</td>
+                                    </tr>
+                                    <tr>
+                                        <th>해상도(Resolution)</th>
+                                        <td class="text-left">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="subTitle">원시자료 메타정보</td>
+                                    </tr>
+                                    <tr>
+                                        <th>원시자료명</th>
+                                        <td class="text-left">환경공간정보서비스 생태자연도 API</td>
+                                    </tr>
+                                    <tr>
+                                        <th>원시자료 출처</th>
+                                        <td class="text-left">환경보,<br />https://egis.me.go.kr/api/ezm.do</td>
+                                    </tr>
+                                    <tr>
+                                        <th>원시자료 지정년도</th>
+                                        <td class="text-left">2020</td>
+                                    </tr>
+                                    <tr>
+                                        <th>원시자료 제작년도</th>
+                                        <td class="text-left">2020</td>
+                                    </tr>
+                                    <tr>
+                                        <th>국토환경정보센터</th>
+                                        <td class="text-left">https://www.neins.go.kr/mid=12010400</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--//layerMeta-desc -->
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn-c-wg active"><i class="ico-btn-download active mr10"></i>XLS</button>
+                        <button type="button" class="btn-c-wg">닫기</button>
+                    </div>           
+                </div>
+            </div>
+        </div>
+        <!--//layerMeta -->
 
+        <!-- moni_Pop -->
+        <div class="modal fade alert-wrp moni_Pop" id="moniPop">
+            <div class="modal-dialog modal-Monitor modal-dialog-centered">
+                <div class="modal-content pb60">
+                    <div class="modal-btn-area">
+                        <button type="button" class="modal-close" data-bs-dismiss="modal">&times;</button>
+                    </div>
+                    <h2 class="pop-title mb6">환경변화</h2>
+                    <h3 class="pop-subtitle">환경영향평과 DB와 모니터링 DB 비교 분석</h3>
+                    <div class="pop-cont">
+                        <!-- moni_Pop-desc -->
+                        <div class="row">
+                            <div class="col-3 pr0">
+                                <select class="form-control">
+                                    <option>원동풍력 발전사업</option>
+                                    <option>원동풍력 발전사업</option>
+                                    <option>원동풍력 발전사업</option>
+                                </select>
+                                <div class="select-title">선택한 조사지점</div>
+                                <img src="images/pop/monitor1.png" alt="선택한 조사지점" />
+                            </div>
+                            <div class="col-9">
+                                <div class="row mb45">
+                                    <div class="col-6 pr0">
+                                        <select class="form-control">
+                                            <option>소음진동</option>
+                                            <option>소음진동</option>
+                                            <option>소음진동</option>
+                                        </select>
+                                        <div class="select-title">환경영향평가 DB</div>
+
+                                        <div class="tbl-wrp scroll_area"> 
+                                            <table class="mb0">
+                                                <colgroup>
+                                                    <col style="width:20%;" />
+                                                    <col style="width:20%;" />
+                                                    <col style="width:20%;" />
+                                                    <col style="width:20%;" />
+                                                    <col style="width:20%;" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">조사지점</th>
+                                                        <th scope="col">조사차수</th>
+                                                        <th scope="col">조사시작일</th>
+                                                        <th scope="col">조사종료일</th>
+                                                        <th scope="col">소음(dB)</th>
+                                                    </tr>                                    
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>A-1</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-2</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-1</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-2</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>A-3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>16</td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <select class="form-control">
+                                            <option>소음</option>
+                                            <option>소음</option>
+                                            <option>소음</option>
+                                        </select>
+                                        <div class="select-title">모니터링 DB</div>
+                                        <div class="tbl-wrp scroll_area"> 
+                                            <table class="mb0">
+                                                <colgroup>
+                                                    <col style="width:20%;" />
+                                                    <col style="width:20%;" />
+                                                    <col style="width:20%;" />
+                                                    <col style="width:20%;" />
+                                                    <col style="width:20%;" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">조사지점</th>
+                                                        <th scope="col">조사차수</th>
+                                                        <th scope="col">조사시작일</th>
+                                                        <th scope="col">조사종료일</th>
+                                                        <th scope="col">소음(dB)</th>
+                                                    </tr>                                    
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>P1</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P2</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P3</td>
+                                                        <td>1차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>11</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P1</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P2</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P2</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P2</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P2</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P2</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>P2</td>
+                                                        <td>2차</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>2022-01-03</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="images/pop/monitor2.svg" class="ml30"alt="환경영향평가" />
+                                <div class="tbl-wrp bottom-table pl20"> 
+                                    <table class="mb0">
+                                        <colgroup>
+                                            <col style="width:15%;"/>
+                                            <col style="width:14%;"/>
+                                            <col style="width:14%;"/>
+                                            <col style="width:14%;"/>
+                                            <col style="width:14%;"/>
+                                            <col style="width:14%;"/>
+                                            <col style="width:15%;"/>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">1차<br /><span>20211130~20201201</span></th>
+                                                <th scope="col">2차<br /><span>20211130~20201201</span></th>
+                                                <th scope="col">3차<br /><span>20211130~20201201</span></th>
+                                                <th scope="col">1차<br /><span>20211130~20201201</span></th>
+                                                <th scope="col">2차<br /><span>20211130~20201201</span></th>
+                                                <th scope="col">3차<br /><span>20211130~20201201</span></th>
+                                                <th scope="col">4차<br /><span>20211130~20201201</span></th>
+                                            </tr>                                    
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="3">환경영향평가</td>
+                                                <td colspan="4"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//moni_Pop-desc -->
+                    </div>          
+                </div>
+            </div>
+        </div>
+        <!--//moniPop -->
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </body>

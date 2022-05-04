@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>EDOW - main</title>
         <link type="text/css" rel="stylesheet" href="./css/common.css">
+        <link type="text/css" rel="stylesheet" href="./css/sub.css">
     </head>
     <body>
         <header>
@@ -35,83 +36,100 @@
         <div id="container">
             <!-- login-wrp -->
             <div class="login-wrp">
-                <h2 class="wrp-title">회원 가입</h2>
-                <div class="input-wrp  row">
-                    <div class="row btn-area col-12">
-                        <div class="col-9 pr0">
-                            <input type="text" placeholder="아이디" class="form-control" />
+                <div class="login-inner">
+                    <h2 class="wrp-title">회원 가입</h2>
+                    <div class="input-wrp  row">
+                        <div class="row btn-area col-12">
+                            <div class="col-9 pr0">
+                                <input type="text" placeholder="아이디" class="form-control" />
+                            </div>
+                            <div class="col-3 pl10">
+                                <button type="button" class="btn-sm btn-c-wb" data-bs-toggle="modal" data-bs-target="#overlapPop">중복확인</button>
+                            </div>
                         </div>
-                        <div class="col-3 pl20">
-                            <button type="button" class="btn-middle btn-c-wb" data-bs-toggle="modal" data-bs-target="#overlapPop">중복확인</button>
+                        <div class="col-12 pl0 pr0">
+                            <input type="text" placeholder="비밀번호" class="form-control" />
                         </div>
-                    </div>
-                    <div class="col-12 pl0">
-                        <input type="text" placeholder="비밀번호" class="form-control" />
-                    </div>
-                    <div class="col-12 pl0">
-                        <input type="text" placeholder="비밀번호 확인" class="form-control" />
-                    </div>
-                    <div class="col-12 pl0">
-                        <input type="text" placeholder="이름" class="form-control" />
-                    </div>
-                    <div class="col-12 pl0">
-                        <input type="text" placeholder="소속" class="form-control" />
-                    </div>
-                    <div class="row col-12 pl0 pr15 align-items-center">
-                        <div class="col-6">
-                            <input type="text" placeholder="이메일" class="form-control" />
+                        <div class="col-12 pl0 pr0">
+                            <input type="text" placeholder="비밀번호 확인" class="form-control" />
                         </div>
-                        <div class="col-1">
-                            @
+                        <div class="col-12 pl0 pr0">
+                            <input type="text" placeholder="이름" class="form-control" />
                         </div>
-                        <div class="col-5">
-                            <select class="form-control">
-                                <option>선택</option>
-                                <option>선택</option>
-                                <option>선택</option>
-                            </select>
+                        <div class="col-12 pl0 pr0">
+                            <input type="text" placeholder="소속" class="form-control" />
                         </div>
+                        <div class="row col-12 pl0 pr0 align-items-center">
+                            <div class="col-6 pr0">
+                                <input type="text" placeholder="이메일" class="form-control" />
+                            </div>
+                            <div class="col-1">
+                                @
+                            </div>
+                            <div class="col-5 pl0">
+                                <select class="form-control">
+                                    <option>선택</option>
+                                    <option>선택</option>
+                                    <option>선택</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row col-12 pl0 pr0 justify-content-between">
+                            <span class="sort-title">이메일 수신여부</span>
+                            <div class="order-last">
+                                <label class="label-input-radio">
+                                    <input type="radio" name="radio1" value="radio1-1" checked />
+                                    <span class="input-txt">수신</span>
+                                </label>
+                                <lable class="label-input-radio">
+                                    <input type="radio" name="radio1" value="radio1-2" />
+                                    <span class="input-txt">수신안함</span>
+                                </lable>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="row col-12 pl0 pr15 justify-content-between">
-                        <span class="sort-title">이메일 수신여부</span>
-                        <div class="order-last">
-                            <label class="label-input-radio">
-                                <input type="radio" name="radio1" value="radio1-1" checked />
-                                <span class="input-txt">수신</span>
-                            </label>
-                            <lable class="label-input-radio">
-                                <input type="radio" name="radio1" value="radio1-2" />
-                                <span class="input-txt">수신안함</span>
-                            </lable>
-                        </div>
+                    <div class="btn-area col-12">
+                        <button type="button" class="btn-c-darkblue btn-login col-12">로그인</button>
                     </div>
-                    
-                </div>
-                <div class="btn-area col-12">
-                    <button type="button" class="btn-c-darkblue btn-login col-12">로그인</button>
                 </div>
             </div>
             <!--//login-wrp -->
         </div>
         <!--//container -->
 
-        <div class="modal fade alert-wrp" id="overlapPop">
+        <!-- overlapPop -->
+        <div class="modal fade alert-wrp id_check" id="overlapPop">
             <div class="modal-dialog modal-sm modal-dialog-centered">
-                <div class="modal-content">
-                    <p class="msg-center">
-                        수정하시겠습니까?
-                    </p>
-                    <div class="btn-area">
-                        <button type="button" class="btn-c-wg" data-bs-dismiss="modal">취소</button>
-                        <button type="button" class="btn-c-blue">확인</button>
-                    </div>          
+                <div class="modal-content pb60">
+                    <div class="modal-btn-area">
+                        <button type="button" class="modal-close" data-bs-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="pop-cont">
+                        <p class="msg-center">
+                            아이디 중복검사
+                        </p>
+                        <div class="row btn-area col-12 mt20">
+                            <div class="col-8 pr0">
+                                <input type="text" placeholder="아이디" class="form-control" />
+                            </div>
+                            <div class="col-4 pl10">
+                                <button type="button" class="btn-sm btn-c-wb" data-bs-toggle="modal" data-bs-target="#overlapPop">중복확인</button>
+                            </div>
+                        </div>
+                        <div class="row notice-wrp mt20">
+                            <span class="col">이미 사용 중인 아이디입니다. </span>
+                        </div>
+                        <div class="row notice-wrp">
+                            <span class="col">사용하실 다른 아이디를 입력하여 주십시오.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- overlapPop -->
 
-        <footer></footer>
-
-        <script type="text/javascript" src="/js/jquery.min.js"></script>
-        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </body>
 </html>

@@ -228,7 +228,7 @@ div>.lnb-section:last-child{
 
 /* srch business */
 .srch-business [class*=label-input-] .input-txt{
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: -1px;
 }
 
@@ -404,4 +404,10 @@ div>.lnb-section:last-child{
 }
 .sort-wrp>ul>li:last-child .inner-sort-wrp{
     border-radius: 0 0 5px 5px;
+}
+
+
+/* 0502 */
+.input-wrp .sort-title{
+    font-size: 13px;
 }
