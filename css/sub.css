@@ -153,19 +153,23 @@ div>.lnb-section:last-child{
 .tab-wrp.type-btn .tab{
     border:1px solid #e2e2e2;
     border-radius: 5px;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
     height:48px;
 }
 .tab-wrp.type-btn .tab>li{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height:48px;
+    height: 48px;
     padding: 0;
     margin:0;
     color:#999;
     font-size: 15px;
     border-right: 1px solid #e2e2e2;
+}
+.tab-wrp.type-btn .tab>li:first-child{
+    border-right: 0;
 }
 .tab-wrp.type-btn .tab>li:last-child{
     border-right: 0;
