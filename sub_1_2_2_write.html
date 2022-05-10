@@ -67,15 +67,49 @@
                 <section class="content">
                     <h2 class="page-title">모니터링 정보</h2>
                         <!-- srch-wrp -->
-                        <div class="srch-wrp bg-gray">
-                            <label class="srch-title">검색어</label>
-                            <select class="form-control form-data-set">
-                                <option>데이터셋명</option>
-                                <option>데이터셋명</option>
-                                <option>데이터셋명</option>
-                            </select>
-                            <input type="text" class="form-control form-srch" value="소음진동 조사" />
-                            <button type="button" class="btn-c-wb">조회</button>
+                        <div class="srch-wrp bg-gray mb15">
+                            <div class="srch-detail w-full">
+                                <div class="row">
+                                    <div class="col-4 detail-name">
+                                        <span class="srch-title">모니터링 조사명</span>
+                                        <input type="text" class="form-control" value="가덕산 풍력발전단지 수질조사" />
+                                    </div>
+                                    <div class="col-3 detail-group">
+                                        <span class="srch-title">그룹명</span>
+                                        <select class="form-control">
+                                            <option>수환경</option>
+                                            <option>수환경</option>
+                                            <option>수환경</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 detail-dataset">
+                                        <span class="srch-title">데이터셋 명</span>
+                                        <select class="form-control">
+                                            <option>수질조사</option>
+                                            <option>수질조사</option>
+                                            <option>수질조사</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 detail-private">
+                                        <span class="srch-title">공개여부 설정</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 detail-business">
+                                        <span class="srch-title">관련 육상풍력단지 사업</span>
+                                        <select class="form-control">
+                                            <option>사업명</option>
+                                            <option>사업명</option>
+                                            <option>사업명</option>
+                                            <option>사업명</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-8 with-btn">
+                                        <input type="text" class="form-control" value="태백시 가덕산 풍력발전단지 조성사업" />
+                                        <button type="button" class="btn btn-large btn-c-wb">조회</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!--//srch-wrp -->
                         <!-- tbl-wrp -->
@@ -152,7 +186,7 @@
                         </div>
                         <!--//tbl-wrp -->
                         <div class="tbl-btn-area text-right mt10">
-                            <button type="button" class="btn-c-sky btn-sm" data-bs-toggle="modal" data-bs-target="#mapAdd">+ 등록</button>
+                            <button type="button" class="btn-c-sky btn-middle" data-bs-toggle="modal" data-bs-target="#mapAdd">+ 조사지점 등록</button>
                         </div>
                         <!-- tbl-pager-wrp
                         <div class="tbl-pager-wrp">

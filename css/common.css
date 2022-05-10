@@ -20,6 +20,9 @@ li{list-style:none;}
 textarea{resize: none;}
 .form-control::placeholder{color:#c8c8c8;}
 .form-control:disabled, .form-control[readonly]{background-color:#f8f8f8;color:#999;}
+.form-control.form-large,
+.btn-large{height:50px !important;}
+label{margin-bottom: 0;}
 .row{margin:0;}
 .row [class*=col-]:first-child{padding-left:0;}
 .row [class*=col-]:last-child{padding-right:0;}
@@ -28,7 +31,7 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
 
 /* bg */
 .bg-gray{
-    background-color: #f8f8f8;
+    background-color: #fafafa;
 }
 
 /* text align */
@@ -165,6 +168,10 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
     background-color: #fff;
     color:#ff0000;
     border:1px solid #ff0000;
+}
+.btn-txt-underline{
+    border-bottom:1px solid #666;
+    color:#666;
 }
 
 /* 특정 btn */
@@ -316,6 +323,9 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
 [class*=label-input-] .input-txt.blk{
     color:#212529;
 }
+[class*=label-input-] .input-txt{
+    font-size: 15px;
+}
 .label-input-radio .input-txt::before,
 .label-input-checkbox .input-txt::before{
     content: '';
@@ -332,7 +342,7 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
 .label-input-radio{
     margin-right:20px;
     padding-left: 25px;
-}
+display: inline-flex;align-items: center;justify-content: center;}
 .label-input-radio input:checked + .input-txt{
     color:#085daa;
 }
@@ -340,9 +350,9 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
     width:18px;
     height: 18px;
     border-radius: 50%;
-    border:1px solid #dead;
+    border:1px solid #dadada;
     background-color: #fff;
-    top: 4px;
+    top: 2px;
 }
 .label-input-radio input:checked + .input-txt::before{
     border-color: #1F68AC;
@@ -351,7 +361,7 @@ img{max-width: 100%;image-rendering: -webkit-optimize-contrast;}
     content: '';
     position: absolute;
     left: 5px;
-    top: 9px;
+    top: 7px;
     width: 8px;
     height: 8px;
     background-color: #1F68AC;
@@ -449,7 +459,7 @@ header{
 .header-wrp .gnb{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     flex:0 0 55%;
     max-width: 55%;
 }
@@ -487,6 +497,9 @@ header{
     position:absolute;
     right:0;
     top: calc(50% - 4px);
+}
+.header-wrp .login-area>ul>li:last-child{
+    padding-right: 0;
 }
 .header-wrp .login-area>ul>li:last-child::after{
     display: none;
@@ -532,7 +545,7 @@ header{
     content: '';
     color:#085daa;
     font-size: 10px;
-    background-color: #94ccff;
+    background: url(../images/common/ico-arrow-direct.svg) no-repeat center left 5px/auto 35% #94ccff;
     border-radius: 50%;
     width: 14px;
     height: 14px;
@@ -562,7 +575,7 @@ header{
 
 /* login, join */
 .login-wrp{
-    margin: 0 auto;
+    margin: 140px auto 0;
     max-width: 432px;
     height:600px;
     display: flex;
@@ -584,6 +597,7 @@ header{
 .login-wrp .form-control,
 .login-wrp [class*=btn-c]{
     margin:5px 0;
+    height:50px;
 }
 .login-wrp .find-btn-area{
     margin:10px 0;
@@ -591,6 +605,17 @@ header{
 }
 .login-wrp .btn-area{
     width: 100%;
+}
+.login-wrp .btn-txt::after{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: #d8d8d8;
+    margin: 0 7px 0 10px;
+}
+.login-wrp .btn-area .btn-txt:last-child::after{
+    display: none;
 }
 
 /* search */
@@ -604,6 +629,9 @@ header{
 }
 .srch-wrp.bg-gray{
     background-color: #f8f8f8;
+}
+.srch-wrp .srch-detail.w-full{
+    width:100%;
 }
 .srch-wrp .srch-title{
     min-width: 42px;
@@ -619,8 +647,23 @@ header{
 .srch-wrp .form-data-set{
     width: 177px;
 }
+.srch-wrp .with-btn input[type=text].form-control{
+    width:calc(100% - 130px);
+}
+select.form-control{
+    position: relative;
+}
+select.form-control::after{
+    content: '';
+    background:url(../images/common/ico-select-arrow.svg) no-repeat center/auto 100%;
+    position:absolute;
+    width:12px;
+    height:8px;
+    right:10px;
+    top:calc(50% - 4px);
+}
 .srch-wrp .form-srch{
-    width:calc(100% - 385px);
+    width: calc(100% - 400px);
 }
 .srch-wrp [class*=btn-]{
     width:121px;
@@ -686,7 +729,7 @@ header{
 .tbl-pager-wrp [class*=pager-]>a{
     display: block;
     width: 6px;
-    height: 6px;
+    height: 10px;
     background: url(../images/common/ico-pager-prev.svg) no-repeat center/100% auto;
     font-size: 0;
 }
@@ -766,7 +809,7 @@ header{
 .tbl-list table td{
     background-color: transparent;
     border-width: 1px 0;
-    padding:15px 12px;
+    padding: 14.75px 12px;
 }
 .tbl-list table thead th{
     border-width: 0 0 1px 0;
@@ -1088,7 +1131,7 @@ header{
     margin-bottom:26px;
 }
 .moni_Pop .select-title {
-    font-size: 14px;
+    font-size: 1px;
     font-weight: 500;
     color: #444;
     margin-bottom:14px;

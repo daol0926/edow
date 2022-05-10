@@ -95,6 +95,8 @@ div>.lnb-section:last-child{
     align-items: center;
     padding-top:6px;
     padding-bottom: 6px;
+    padding-left: 0;
+    padding-right: 10px;
 }
 .srch-detail .srch-title{
     margin:0 20px;
@@ -151,7 +153,7 @@ div>.lnb-section:last-child{
 .tab-wrp.type-btn .tab{
     border:1px solid #e2e2e2;
     border-radius: 5px;
-    justify-content: space-between;
+    justify-content: center;
     height:48px;
 }
 .tab-wrp.type-btn .tab>li{
@@ -410,4 +412,9 @@ div>.lnb-section:last-child{
 /* 0502 */
 .input-wrp .sort-title{
     font-size: 13px;
+}
+
+
+.address-type label{
+    margin-bottom: 10px;
 }
